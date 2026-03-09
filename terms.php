@@ -18,19 +18,18 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?= $domainTitle ?> — Экспертный консалтинг и стратегии роста
+        <?= $domainTitle ?> — Инновационная IT-школа
     </title>
-<link rel="icon"
-    href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23635BFF;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230A2540;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M4 16H9L12 6L18 26L21 16H28' stroke='url(%23grad)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='28' cy='16' r='3' fill='%23635BFF' /%3E%3C/svg%3E"
-    type="image/svg+xml">
+<link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' rx='8' fill='%23FF6B00'/%3E%3Cpath d='M10 12L14 16L10 20' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 20H22' stroke='white' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='10' r='3' fill='%23FF9E5E' /%3E%3C/svg%3E">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Manrope:wght@500;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap"
         rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -38,164 +37,141 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
 
     <header class="header">
         <div class="container header__container">
-            <a href="./#hero" class="logo">
-                <span class="logo__icon"></span>
-                <span class="logo__text">
-                    <?= $domainTitle ?>
-                </span>
+            <a href="./#home" class="logo">
+                <span class="logo__dot"></span>
+                <?= $domainTitle ?>
             </a>
 
             <nav class="nav">
                 <ul class="nav__list">
-                    <li><a href="./#hero" class="nav__link">Главная</a></li>
-                    <li><a href="./#strategies" class="nav__link">Стратегии</a></li>
-                    <li><a href="./#expertise" class="nav__link">Экспертиза</a></li>
-                    <li><a href="./#insights" class="nav__link">Инсайты</a></li>
+                    <li><a href="./#home" class="nav__link">Главная</a></li>
+                    <li><a href="./#courses" class="nav__link">Программы</a></li>
+                    <li><a href="./#about" class="nav__link">О нас</a></li>
                     <li><a href="./#reviews" class="nav__link">Отзывы</a></li>
+                    <li><a href="./#faq" class="nav__link">FAQ</a></li>
                 </ul>
             </nav>
 
-            <a href="./#contact" class="btn btn--outline header__cta">Связаться</a>
-
-            <button class="burger" aria-label="Menu">
-                <span></span>
-            </button>
+            <div class="header__actions">
+                <a href="./#contact" class="btn btn--header">Связаться</a>
+                <button class="burger" id="burger">
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
-
 <main>
     <section class="pages">
         <div class="container">
-            <h1>Условия использования</h1>
+            <h1 data-aos="fade-down">Условия использования</h1>
 
-            <p>
-                Добро пожаловать на сайт <strong><?= $domainTitle ?></strong>! Настоящие Условия использования
-                (далее — «Условия» или «Соглашение») представляют собой юридически
-                обязывающий договор между вами (далее — «Пользователь») и <strong><?= $domainTitle ?></strong>
-                (далее — «Компания», «мы», «нас»). Пожалуйста, внимательно
-                ознакомьтесь с ними. Используя наш сайт и любые связанные с ним
-                услуги, вы подтверждаете свое полное и безоговорочное согласие с
-                данными Условиями. Если вы не согласны, вы должны немедленно
-                прекратить использование сайта.
+            <p data-aos="fade-up">
+                Добро пожаловать на платформу <strong><?= $domainTitle ?></strong>! Настоящие Условия использования
+                (далее — «Условия») представляют собой юридически обязывающий договор между вами 
+                (далее — «Пользователь» или «Студент») и <strong><?= $domainTitle ?></strong> (далее — «Школа»). 
+                Используя наш сайт и любые образовательные услуги, вы подтверждаете свое полное согласие с данными Условиями. 
+                Если вы не согласны, вы должны немедленно прекратить использование платформы.
             </p>
 
-            <h2>1. Предмет Соглашения</h2>
-            <p>
-                Компания предоставляет Пользователю доступ к использованию сайта
-                <strong><?= $fullDomain ?></strong> и его функционала, включая, но не ограничиваясь: доступ к
-                инновационным материалам, статьям в блоге, экспертным консультациям и другим инструментам 
-                развития (далее — «Услуги»). Настоящее Соглашение регулирует все аспекты
-                взаимодействия Пользователя с платформой.
+            <h2 data-aos="fade-up">1. Предмет Соглашения</h2>
+            <p data-aos="fade-up">
+                Школа предоставляет Пользователю доступ к образовательному контенту на сайте 
+                <strong><?= $fullDomain ?></strong>, включая интерактивные курсы по программированию, 
+                дизайну, доступ к AI-инструментам, менторскую поддержку и учебную цифровую инфраструктуру 
+                (далее — «Услуги»). Настоящее Соглашение регулирует все аспекты обучения и взаимодействия с платформой.
             </p>
 
-            <h2>2. Обязанности и права Пользователя</h2>
-            <p>
-                Вы обязуетесь использовать сайт исключительно в законных и личных
-                некоммерческих целях. При использовании платформы <strong><?= $domainTitle ?></strong>
-                <strong>запрещается</strong>:
+            <h2 data-aos="fade-up">2. Обязанности и права Пользователя</h2>
+            <p data-aos="fade-up">
+                Вы обязуетесь использовать материалы Школы исключительно в законных целях для личного профессионального развития. 
+                На платформе <strong><?= $domainTitle ?></strong> <strong>запрещается</strong>:
             </p>
-            <ul>
+            <ul data-aos="fade-up">
                 <li>
-                    Публиковать, передавать или распространять любую информацию,
-                    которая является незаконной, вредоносной, клеветнической,
-                    нарушает авторские права или разжигает ненависть.
+                    Копировать, перепродавать или распространять учебные материалы, видеолекции и программный код курсов третьим лицам.
                 </li>
                 <li>
-                    Предпринимать любые действия, которые могут нарушить нормальную
-                    работу сайта, его безопасность или привести к перегрузке
-                    цифровой инфраструктуры <strong><?= $domainTitle ?></strong>.
+                    Предпринимать действия, направленные на нарушение безопасности цифровой инфраструктуры <strong><?= $domainTitle ?></strong> 
+                    или получение несанкционированного доступа к данным других студентов.
                 </li>
                 <li>
-                    Использовать автоматизированные скрипты (ботов) для сбора
-                    информации или иного взаимодействия с сайтом без нашего
-                    предварительного письменного разрешения.
+                    Использовать автоматизированные скрипты (парзеры, боты) для скачивания контента сайта без предварительного разрешения.
                 </li>
                 <li>
-                    Выдавать себя за другое лицо или предоставлять недостоверную
-                    информацию о себе при регистрации на консультацию.
+                    Предоставлять заведомо ложную информацию при регистрации или подаче заявки на бесплатную консультацию.
                 </li>
             </ul>
 
-            <h2>3. Интеллектуальная собственность</h2>
-            <p>
-                Весь контент, размещенный на сайте <strong><?= $fullDomain ?></strong>, включая тексты, графику,
-                изображения, видео, логотипы и программный код (далее — «Контент»), является объектом интеллектуальной
-                собственности Компании или ее партнеров. Вам предоставляется ограниченная
-                лицензия на доступ и использование Контента в личных целях для профессионального развития. 
-                Любое копирование, воспроизведение или распространение Контента без предварительного 
-                письменного разрешения правообладателя строго запрещено.
+            <h2 data-aos="fade-up">3. Интеллектуальная собственность</h2>
+            <p data-aos="fade-up">
+                Весь контент на сайте <strong><?= $fullDomain ?></strong>, включая уникальные методики обучения, графику, 
+                код упражнений и логотипы, является интеллектуальной собственностью Школы. Вам предоставляется ограниченная 
+                лицензия на использование Контента в личных образовательных целях. Любое использование материалов 
+                вне рамок личного обучения без письменного согласия правообладателя строго запрещено.
             </p>
 
-            <h2>4. Ограничение ответственности и отказ от гарантий</h2>
-            <p>
-                Услуги и все материалы на сайте предоставляются по принципу «как
-                есть» (as is). Мы не даем никаких гарантий, что сайт будет работать бесперебойно, 
-                без ошибок или что его контент является абсолютно точным в контексте динамически 
-                меняющегося рынка в Германии и странах ЕС.
+            <h2 data-aos="fade-up">4. Ограничение ответственности</h2>
+            <p data-aos="fade-up">
+                Образовательные материалы предоставляются по принципу «как есть». Школа прилагает все усилия для актуализации программы, 
+                но не гарантирует, что контент моментально отражает все изменения на динамичном IT-рынке <strong>Франции</strong> и ЕС.
             </p>
-            <p>
-                Компания не несет ответственности за любые прямые или косвенные
-                убытки, которые могут возникнуть у Пользователя в результате использования 
-                или невозможности использования платформы <strong><?= $domainTitle ?></strong>. 
-                Это также относится к любому контенту сторонних ресурсов, ссылки на которые 
-                могут быть размещены на нашем сайте.
+            <p data-aos="fade-up">
+                Школа не несет ответственности за прямые или косвенные убытки, возникшие в результате использования изученных технологий 
+                в реальных проектах. Ответственность за применение полученных знаний лежит на Пользователе.
             </p>
 
-            <h2>5. Изменения в Условиях использования</h2>
-            <p>
-                Мы оставляем за собой право в любое время изменять или дополнять настоящие Условия. 
-                Все изменения вступают в силу с момента их публикации на этой странице. 
-                Ваше дальнейшее использование сайта <strong><?= $fullDomain ?></strong> после внесения 
-                изменений означает ваше автоматическое согласие с новой редакцией Условий.
+            <h2 data-aos="fade-up">5. Изменения в Условиях</h2>
+            <p data-aos="fade-up">
+                Мы оставляем за собой право изменять данные Условия для улучшения качества сервиса. Изменения вступают в силу 
+                с момента их публикации на этой странице. Ваше дальнейшее использование сайта <strong><?= $fullDomain ?></strong> 
+                после внесения правок означает автоматическое согласие с новой редакцией.
             </p>
 
-            <h2>6. Разрешение споров</h2>
-            <p>
-                Все споры и разногласия стороны будут стремиться разрешить путем конструктивных переговоров.
-                В случае если согласие не будет достигнуто, спор подлежит рассмотрению в соответствии 
-                с действующим законодательством по месту регистрации Компании в <strong>Германии</strong>.
+            <h2 data-aos="fade-up">6. Разрешение споров</h2>
+            <p data-aos="fade-up">
+                Все разногласия стороны стремятся разрешить путем переговоров. В случае невозможности достижения согласия, 
+                спор подлежит рассмотрению в соответствии с действующим законодательством по месту регистрации Оператора 
+                во <strong>Франции (Париж)</strong>.
             </p>
 
-            <h2>7. Контактная информация</h2>
-            <p>
-                Если у вас возникли вопросы, связанные с настоящими Условиями,
-                пожалуйста, свяжитесь с нами по электронной почте:
+            <h2 data-aos="fade-up">7. Контактная информация</h2>
+            <p data-aos="fade-up">
+                По любым вопросам, связанным с использованием платформы, пожалуйста, свяжитесь с нами:
                 <br><br>
                 Email: <a href="mailto:hello@<?= $fullDomain ?>">hello@<?= $fullDomain ?></a><br>
-                Телефон: <a href="tel:+390697639457">+390697639457</a>
+                Телефон: <a href="tel:+33189480604">+33 1 89 48 06 04</a><br>
+                Адрес: 15 Rue de la Paix, 75002 Paris, France
             </p>
+
+            <div class="pages-footer" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05);" data-aos="fade-in">
+                <p style="font-size: 0.9rem; opacity: 0.7;">Последнее обновление: Март 2026</p>
+            </div>
         </div>
     </section>
 </main>
 
-
-
-
-     <footer class="footer">
+    <footer class="footer">
         <div class="container footer__grid">
             <div class="footer__col">
-                <a href="./#hero" class="logo footer__logo">
-                    <span class="logo__icon"></span>
-                    <span class="logo__text">
-                        <?= $domainTitle ?>
-                    </span>
+                <a href="./#home" class="logo logo--footer">
+                    <?= $domainTitle ?>
                 </a>
-                <p class="footer__description">Технологии нового поколения для вашего бизнеса. Переосмыслите подход к
-                    развитию вместе с экспертной поддержкой.</p>
+                <p class="footer__tagline">Технологии, которые работают на вас. Постройте карьеру, которая меняет
+                    правила игры.</p>
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__title">Навигация</h4>
+                <h4 class="footer__title">Меню</h4>
                 <ul class="footer__links">
-                    <li><a href="./#hero">Главная</a></li>
-                    <li><a href="./#strategies">Стратегии</a></li>
-                    <li><a href="./#expertise">Экспертиза</a></li>
-                    <li><a href="./#insights">Инсайты</a></li>
+                    <li><a href="./#home">Главная</a></li>
+                    <li><a href="./#courses">Программы</a></li>
+                    <li><a href="./#about">О нас</a></li>
+                    <li><a href="./#contact">Контакты</a></li>
                 </ul>
             </div>
 
             <div class="footer__col">
-                <h4 class="footer__title">Документы</h4>
+                <h4 class="footer__title">Юридическая информация</h4>
                 <ul class="footer__links">
                     <li><a href="./privacy.php">Privacy Policy</a></li>
                     <li><a href="./cookies.php">Cookie Policy</a></li>
@@ -209,46 +185,44 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
 
             <div class="footer__col">
                 <h4 class="footer__title">Контакты</h4>
-                <ul class="footer__contact">
-                    <li><i data-lucide="phone" class="icon-sm"></i> +390697639457</li>
-                    <li><i data-lucide="mail" class="icon-sm"></i> hello@
-                        <?= $fullDomain ?>
-                    </li>
-                    <li><i data-lucide="map-pin" class="icon-sm"></i> Kurfürstendamm 21, 10719 Berlin, Germany</li>
-                </ul>
+                <div class="footer__info">
+                    <p><a href="tel:+33189480604">+33 1 89 48 06 04</a></p>
+                    <p><a href="mailto:hello@<?= $fullDomain ?>">hello@
+                            <?= $fullDomain ?>
+                        </a></p>
+                    <p>15 Rue de la Paix, 75002 Paris, France</p>
+                </div>
             </div>
         </div>
         <div class="container footer__bottom">
             <p>&copy; 2026
-                <?= $domainTitle ?>. Все права защищены. Предложение активно только в странах ЕС.
+                <?= $domainTitle ?>. Все права защищены. Предложение активно в странах ЕС.
             </p>
         </div>
     </footer>
-<div class="mobile-menu">
-    <button class="mobile-menu__close"><i data-lucide="x"></i></button>
-    <ul class="mobile-menu__list">
-        <li><a href="./#hero" class="mobile-menu__link">Главная</a></li>
-        <li><a href="./#strategies" class="mobile-menu__link">Стратегии</a></li>
-        <li><a href="./#expertise" class="mobile-menu__link">Экспертиза</a></li>
-        <li><a href="./#insights" class="mobile-menu__link">Инсайты</a></li>
-        <li><a href="./#reviews" class="mobile-menu__link">Отзывы</a></li>
-        <li><a href="./#contact" class="btn btn--primary">Связаться</a></li>
-    </ul>
-</div>
-
-<div id="cookie-popup" class="cookie-popup">
-    <div class="cookie-popup__content">
-        <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.php">Cookie
-                политике</a>.</p>
-        <button id="cookie-accept" class="btn btn--accent-sm">Принять</button>
-    </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script type="module" src="script.js"></script>    
- 
-    
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu__content">
+                <nav class="mobile-nav">
+                    <a href="./#home" class="mobile-nav__link">Главная</a>
+                    <a href="./#courses" class="mobile-nav__link">Программы</a>
+                    <a href="./#about" class="mobile-nav__link">О нас</a>
+                    <a href="./#reviews" class="mobile-nav__link">Отзывы</a>
+                    <a href="./#contact" class="mobile-nav__link">Связаться</a>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="cookie-popup" id="cookiePopup">
+            <div class="cookie-popup__content">
+                <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.php">Cookie
+                        политике</a>.</p>
+                <button class="btn btn--primary" id="acceptCookies">Принять</button>
+            </div>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
